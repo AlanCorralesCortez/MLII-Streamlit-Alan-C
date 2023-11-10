@@ -11,6 +11,9 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 
+# Set the file path (this path needs to be accessible by Streamlit)
+file_path = 'US_Regional_Sales_Data.csv'
+
 # Function to convert currency to float
 def currency_to_float(currency_val):
     if isinstance(currency_val, str):
@@ -42,8 +45,6 @@ def load_and_preprocess_data(file_path):
 
     return data
 
-# Set the file path (this path needs to be accessible by Streamlit)
-file_path = 'C:/Users/alanc/Downloads/US_Regional_Sales_Data.csv'
 
 # Load and preprocess the data
 data = load_and_preprocess_data(file_path)
